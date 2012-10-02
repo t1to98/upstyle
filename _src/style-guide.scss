@@ -1,0 +1,256 @@
+/* Bring in all Compass Helpers as well as Tito's base style files */
+@import "partials/base";
+
+$sans: "Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;
+
+.page-h1 {
+	font: normal bold em(62) $serif;
+	color: #000;
+}
+
+.style-bd {
+	background-color: #f5f5f5;
+}
+
+.style-content {
+	padding: 35px 20px;
+	margin: 0 auto;
+	max-width: 1400px;	
+}
+
+.style-hdr {
+	padding: 0 10px 21px;
+	margin-bottom: 40px;
+	border-bottom: 1px solid #ccc;
+	position: relative;
+	min-height: 60px;
+	@include pie-clearfix;
+	&:after {
+		content: '\0020';
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		right: 0;
+		border-bottom: 1px solid #fff;
+		z-index: 1;
+	}
+}
+
+.style-page-h {
+	font: normal bold em(28) $sans;
+	color: #000;
+	@include text-shadow(#fff 1px 1px 0);
+	float: left;
+	.thin {
+		font-weight: normal;
+	}
+}
+
+.all-code-btn {
+	font-size: em(11);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #989898;
+	background-color: #ddd;
+	padding: 8px 15px;
+	margin-top: 6px;
+	display: block;
+	float: right;
+	@include border-radius(100px);
+	@include trans;
+	&:hover {
+		background-color: #333;
+		color: #ddd;
+		cursor: pointer;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+
+.style-mod {
+	background-color: #fff;
+	margin-bottom: 60px;
+	@include border-radius(2px);
+	@include box-shadow(rgba(0,0,0,.15) 1px 0 3px);	
+	overflow: hidden;
+	
+	> .inner {
+		padding: 24px;
+	}
+}
+
+$side-pad: 24px;
+
+.style-hgroup {
+	color: #464646;
+	background-color: #ededed;
+	padding: 10px $side-pad;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+	@include pie-clearfix;	
+}
+
+.style-h {
+	@include float(left);
+}
+
+.code-btn {
+	font-size: em(9);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #989898;
+	background-color: #ddd;
+	padding: 6px 13px;
+	margin-top: -4px;
+	position: absolute;
+	right: 10px;
+	@include border-radius(100px);
+	@include trans;
+	&:hover {
+		background-color: #333;
+		color: #ddd;
+		cursor: pointer;
+	}
+}
+
+.code-example {
+	background-color: #333;
+	padding: 14px $side-pad;
+	@include border-radius(0 0 2px 2px);
+
+	> .inner {
+		margin-left: -41px;
+		background-image: image-url('bg-dot-666.gif');
+		background-position: 51.5% 10px;
+		background-repeat: repeat-y;
+		@include pie-clearfix;
+		> .ui-block {
+			padding-left: 41px;
+			width: 50%;
+			@include float(left);
+		}
+	}
+}
+
+.code-h {
+	font: normal bold em(14) $sans;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #fff;
+	margin-bottom: 8px;
+	@include opacity(.6);
+	&:hover {
+		cursor: pointer;
+	} 
+}
+
+.code-copy {
+	display: inline-block;
+	text-indent: -9999em;
+	height: 20px;
+	width: 19px;
+	margin-left: 2px;
+	top: -3px;
+	background: transparent image-url('icon-copy.png') no-repeat 50% 50%;
+	position: relative;
+	@include opacity(0);
+	@include trans;
+	
+	.touch &,
+	.code-h:hover & {
+		@include opacity(1);
+	}
+}
+
+.ta {
+	color: #999;
+	background-color: transparent;
+	border: 0;
+	width: 100%;
+	-webkit-appearance: none;
+	&:focus {
+		outline: 0;
+	}
+	&::-moz-selection { 
+		background: rgba(255,255,255,.1); 
+		color: #fff; 
+		text-shadow: none; 
+	}
+	&::selection { 
+		background: rgba(255,255,255,.1); 
+		color: #fff; 
+		text-shadow: none; 
+		-webkit-appearance: none;
+	}
+}
+
+
+
+
+//
+// Code
+//
+
+.html-code {
+	padding: 0;
+	color: #666;
+	font: normal 12px/130% $mono;
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+		 
+	.nocode { background-color: none; color: #000 }
+	.str { color: #ffa0a0 } /* string  - pink */
+	.kwd { color: #f0e68c; font-weight: bold }
+	.com { color: #ffa0a0 } /* comment - skyblue */
+	.typ { color: #98fb98 } /* type    - lightgreen */
+	.lit { color: #cd5c5c } /* literal - darkred */
+	.pun { color: rgba(255, 255, 255, .35); }    /* punctuation */
+	.tag { color: #f0e68c; font-weight: bold } /* html/xml tag    - lightyellow */
+	.atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
+	.atv { color: #87ceeb } /* attribute value - pink */
+	.dec { color: #98fb98 } /* decimal         - lightgreen */
+	.pln { color: rgba(255, 255, 255, .35); 
+
+	&:first-child { 
+		width: 20px; 
+		height: 14px; 
+		@include inline-block;  }
+	}    // plaintext
+
+	li:last-child .pln:first-child { 
+		width: 0; 
+		margin-top: 4px; }
+
+	.highlight {
+		color: rgba(179, 45, 71, 1.0);
+		}
+} // .html-code 
+
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE } /* IE indents via margin-left */
+@for $i from 0 through 50 {
+	li.L#{$i} {
+		list-style-type: none;
+		}
+	}	
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { }
+
+
+@media print {
+  pre { background-color: none }
+  pre .str, code .str { color: #060 }
+  pre .kwd, code .kwd { color: #006; font-weight: bold }
+  pre .com, code .com { color: #600; font-style: italic }
+  pre .typ, code .typ { color: #404; font-weight: bold }
+  pre .lit, code .lit { color: #044 }
+  pre .pun, code .pun { color: #440 }
+  pre .pln, code .pln { color: #000 }
+  pre .tag, code .tag { color: #006; font-weight: bold }
+  pre .atn, code .atn { color: #404 }
+  pre .atv, code .atv { color: #060 }
+}
