@@ -3,10 +3,25 @@
 
 $sans: "Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;
 
+
+//
+// Sample Styles
+//
+
 .page-h1 {
 	font: normal bold em(62) $serif;
 	color: #000;
 }
+
+.page-h2 {
+	font: normal bold em(41) $serif;
+	color: #000;
+}
+
+
+//
+// Layout
+//
 
 .style-bd {
 	background-color: #f5f5f5;
@@ -17,6 +32,10 @@ $sans: "Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;
 	margin: 0 auto;
 	max-width: 1400px;	
 }
+
+//
+// Style Guide Header 
+//
 
 .style-hdr {
 	padding: 0 10px 21px;
@@ -58,6 +77,7 @@ $sans: "Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;
 	float: right;
 	@include border-radius(100px);
 	@include trans;
+	@include user-select;
 	&:hover {
 		background-color: #333;
 		color: #ddd;
@@ -69,9 +89,13 @@ $sans: "Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;
 }
 
 
+//
+// Style Example
+//
+
 .style-mod {
 	background-color: #fff;
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 	@include border-radius(2px);
 	@include box-shadow(rgba(0,0,0,.15) 1px 0 3px);	
 	overflow: hidden;
@@ -81,6 +105,7 @@ $sans: "Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;
 	}
 }
 
+// Set universal side padding here
 $side-pad: 24px;
 
 .style-hgroup {
@@ -108,6 +133,7 @@ $side-pad: 24px;
 	right: 10px;
 	@include border-radius(100px);
 	@include trans;
+	@include user-select;
 	&:hover {
 		background-color: #333;
 		color: #ddd;
@@ -115,33 +141,41 @@ $side-pad: 24px;
 	}
 }
 
-.code-example {
-	background-color: #333;
-	padding: 14px $side-pad;
-	@include border-radius(0 0 2px 2px);
+//
+// Details
+//
 
+.style-details {
+	border-top: 1px solid #e5e5e5;
+	background-color: #333;
+	@include border-radius(0 0 2px 2px);
 	> .inner {
-		margin-left: -41px;
-		background-image: image-url('bg-dot-666.gif');
-		background-position: 51.5% 10px;
-		background-repeat: repeat-y;
-		@include pie-clearfix;
-		> .ui-block {
-			padding-left: 41px;
-			width: 50%;
-			@include float(left);
-		}
+		padding: 14px $side-pad;
 	}
+
+	// Show and hide details
+	.details-off & {
+		display: none;
+	}
+	.details-on & {
+		display: block;
+	}
+} 
+
+.detail-h {
+	font: normal bold em(12) $sans;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+	color: #fff;
+	@include opacity(.6);
 }
 
-.code-h {
-	font: normal bold em(14) $sans;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	color: #fff;
-	margin-bottom: 8px;
-	@include opacity(.6);
-	&:hover {
+.style-meta {
+	border-bottom: 1px solid #444;
+}
+
+.code-example {
+	.detail-h:hover {
 		cursor: pointer;
 	} 
 }
@@ -159,34 +193,23 @@ $side-pad: 24px;
 	@include trans;
 	
 	.touch &,
-	.code-h:hover & {
+	.detail-h:hover & {
 		@include opacity(1);
 	}
 }
 
-.ta {
-	color: #999;
-	background-color: transparent;
-	border: 0;
-	width: 100%;
-	-webkit-appearance: none;
-	&:focus {
-		outline: 0;
+.detail-list {
+	max-width: 600px;
+	list-style: square outside;
+	padding: 0 0 0 22px;
+	color: #bbb;
+	> li {
+		margin-bottom: 6px;
+		}
+	> li > p {
+		color: #ddd;
+		}
 	}
-	&::-moz-selection { 
-		background: rgba(255,255,255,.1); 
-		color: #fff; 
-		text-shadow: none; 
-	}
-	&::selection { 
-		background: rgba(255,255,255,.1); 
-		color: #fff; 
-		text-shadow: none; 
-		-webkit-appearance: none;
-	}
-}
-
-
 
 
 //
@@ -200,6 +223,17 @@ $side-pad: 24px;
 	white-space: pre;
 	white-space: pre-wrap;
 	word-wrap: break-word;
+	&::-moz-selection { 
+		background: rgba(255,255,255,.1); 
+		color: #fff; 
+		text-shadow: none; 
+	}
+	&::selection { 
+		background: rgba(255,255,255,.1); 
+		color: #fff; 
+		text-shadow: none; 
+		-webkit-appearance: none;
+	}
 		 
 	.nocode { background-color: none; color: #000 }
 	.str { color: #ffa0a0 } /* string  - pink */

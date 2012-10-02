@@ -358,6 +358,11 @@ button {
   color: #000;
 }
 
+.page-h2 {
+  font: normal bold 3.154em Georgia, Times, Times New Roman, serif;
+  color: #000;
+}
+
 .style-bd {
   background-color: #f5f5f5;
 }
@@ -421,6 +426,12 @@ button {
   -ms-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 .all-code-btn:hover {
   background-color: #333;
@@ -433,7 +444,7 @@ button {
 
 .style-mod {
   background-color: #fff;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -487,6 +498,12 @@ button {
   -ms-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 .code-btn:hover {
   background-color: #333;
@@ -494,44 +511,39 @@ button {
   cursor: pointer;
 }
 
-.code-example {
+.style-details {
+  border-top: 1px solid #e5e5e5;
   background-color: #333;
-  padding: 14px 24px;
   -webkit-border-radius: 0 0 2px 2px;
   -moz-border-radius: 0 0 2px 2px;
   -ms-border-radius: 0 0 2px 2px;
   -o-border-radius: 0 0 2px 2px;
   border-radius: 0 0 2px 2px;
 }
-.code-example > .inner {
-  margin-left: -41px;
-  background-image: url('../_img/bg-dot-666.gif?1344885524');
-  background-position: 51.5% 10px;
-  background-repeat: repeat-y;
-  *zoom: 1;
+.style-details > .inner {
+  padding: 14px 24px;
 }
-.code-example > .inner:after {
-  content: "";
-  display: table;
-  clear: both;
+.details-off .style-details {
+  display: none;
 }
-.code-example > .inner > .ui-block {
-  padding-left: 41px;
-  width: 50%;
-  display: inline;
-  float: left;
+.details-on .style-details {
+  display: block;
 }
 
-.code-h {
-  font: normal bold 1.077em "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
-  text-transform: uppercase;
+.detail-h {
+  font: normal bold 0.923em "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
   letter-spacing: 1px;
-  color: #fff;
   margin-bottom: 8px;
+  color: #fff;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
 }
-.code-h:hover {
+
+.style-meta {
+  border-bottom: 1px solid #444;
+}
+
+.code-example .detail-h:hover {
   cursor: pointer;
 }
 
@@ -552,31 +564,22 @@ button {
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-.touch .code-copy, .code-h:hover .code-copy {
+.touch .code-copy, .detail-h:hover .code-copy {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-.ta {
-  color: #999;
-  background-color: transparent;
-  border: 0;
-  width: 100%;
-  -webkit-appearance: none;
+.detail-list {
+  max-width: 600px;
+  list-style: square outside;
+  padding: 0 0 0 22px;
+  color: #bbb;
 }
-.ta:focus {
-  outline: 0;
+.detail-list > li {
+  margin-bottom: 6px;
 }
-.ta::-moz-selection {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  text-shadow: none;
-}
-.ta::selection {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  text-shadow: none;
-  -webkit-appearance: none;
+.detail-list > li > p {
+  color: #ddd;
 }
 
 .html-code {
@@ -595,6 +598,17 @@ button {
   /* attribute name  - khaki */
   /* attribute value - pink */
   /* decimal         - lightgreen */
+}
+.html-code::-moz-selection {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-shadow: none;
+}
+.html-code::selection {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-shadow: none;
+  -webkit-appearance: none;
 }
 .html-code .nocode {
   background-color: none;

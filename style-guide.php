@@ -43,7 +43,7 @@
 
 </head>
 
-<body class="style-bd" onload="prettyPrint()">
+<body class="style-bd details-off" onload="prettyPrint()">
 
 	<div class="style-content">
 
@@ -51,8 +51,8 @@
 		<!-- Header 				-->
 		<!-- ~~~~~~~~~~~~~~~~~~~~~~	-->
 		<nav id="style-hdr" class="style-hdr">
-			<h1 class="style-page-h"><?php echo $client_name ?> <span class="thin">Style Guide</thin></h1>
-			<a class="all-code-btn">Show All Code</a>
+			<h1 class="style-page-h"><?php echo $client_name ?> <span class="thin">Style Guide</span></h1>
+			<a class="all-code-btn details-trigger"><span class="verb">Show</span> All Details</a>
 		</nav> <!--style-hdr -->
 
 
@@ -62,29 +62,54 @@
 
 		<section id="typography" class="typography">
 
-			<article class="style-mod">
+			<article class="style-mod details-off">
 				<hgroup class="style-hgroup">
 					<h3 class="style-h">Page Headline - h1</h3>
-					<a class="code-btn">Show Code</a>
+					<a class="code-btn details-trigger"><span class="verb">Show</span> Details</a>
 				</hgroup>
 				<div class="inner">
 					<div class="style-example">
 						<h1 class="page-h1">Sample Page Headline 1</h1>
 					</div>
 				</div> <!-- /inner -->
-				<div class="code-example">
-					<div class="inner">
-						<div class="code-markup ui-block">
-							<h4 class="code-h" title="Copy to Clipboard">HTML <span class="code-copy">Copy to clipboard</span></h4>
-							<?php echo $code_snip ?>
-						</div>
-						<div class="code-style ui-block">
-							<h4 class="code-h" title="Copy to Clipboard">CSS <span class="code-copy">Copy to clipboard</span></h4>
-							<textarea class="css-code ta">
-							</textarea>
-						</div>
-					</div> <!-- /inner -->
-				</div> <!-- /code-example -->
+				<section class="style-details">
+					<article class="style-meta inner">
+						<h4 class="detail-h">Description</h4>
+						<ul class="detail-list">
+							<li><p>Used for cover teases</p></li>
+							<li><p>May appear with an illustration (.illo) or without (.no-illo)</p></li>
+						</ul>
+					</article>  <!-- /style-meta -->
+					<article class="code-example inner">
+						<h4 class="detail-h" title="Copy to Clipboard">Code Snip <span class="code-copy">Copy to clipboard</span></h4>
+						<?php echo $code_snip ?>
+					</article>
+				</section> <!-- /style-details -->
+			</article> <!-- /style-mod -->
+
+			<article class="style-mod details-off">
+				<hgroup class="style-hgroup">
+					<h3 class="style-h">Page Headline - h2</h3>
+					<a class="code-btn details-trigger"><span class="verb">Show</span> Details</a>
+				</hgroup>
+				<div class="inner">
+					<div class="style-example">
+						<h1 class="page-h2">Sample Page Headline 2</h1>
+					</div>
+				</div> <!-- /inner -->
+				<section class="style-details">
+					<article class="style-meta inner">
+						<h4 class="detail-h">Description</h4>
+						<ul class="detail-list">
+							<li><p>Used for cover teases</p></li>
+							<li><p>May appear with an illustration (.illo) or without (.no-illo)</p></li>
+						</ul>
+					</article>  <!-- /style-meta -->
+					<article class="code-example inner">
+						<h4 class="detail-h" title="Copy to Clipboard">Code Snip <span class="code-copy">Copy to clipboard</span></h4>
+						<?php echo $code_snip ?>
+					</article>
+				</section> <!-- /style-details -->
 			</article> <!-- /style-mod -->
 
 		</section> <!-- /typography -->
