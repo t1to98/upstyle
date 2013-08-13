@@ -25,7 +25,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title><?php echo $client_name ?> Pattern Library</title>
+  <title><?php echo $client_name ?> Patterns</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -69,7 +69,7 @@
 				</hgroup>
 				<div class="inner">
 					<div class="style-example">
-						<h1 class="page-h1">Sample Page Headline 1</h1>
+						<h1 class="page-h1">page-h1: Sample Page Headline 1</h1>
 					</div>
 				</div> <!-- /inner -->
 				<section class="style-details">
@@ -77,7 +77,7 @@
 						<h4 class="detail-h">Description</h4>
 						<ul class="detail-list">
 							<li><p>Used for cover teases</p></li>
-							<li><p>May appear with an illustration (.illo) or without (.no-illo)</p></li>
+							<li><p>Subhead for page headline. Of course, usage is up to you. Just establishing a naming convention.</p></li>
 						</ul>
 					</article>  <!-- /style-meta -->
 					<article class="code-example inner">
@@ -94,15 +94,14 @@
 				</hgroup>
 				<div class="inner">
 					<div class="style-example">
-						<h1 class="page-h2">Sample Page Headline 2</h1>
+						<h2 class="page-h2">page-h2: Sample Page Headline 2</h2>
 					</div>
 				</div> <!-- /inner -->
 				<section class="style-details">
 					<article class="style-meta inner">
 						<h4 class="detail-h">Description</h4>
 						<ul class="detail-list">
-							<li><p>Used for cover teases</p></li>
-							<li><p>May appear with an illustration (.illo) or without (.no-illo)</p></li>
+							<li><p>Header for a section of content. Think sidebar. Or a series of small site teases.</p></li>
 						</ul>
 					</article>  <!-- /style-meta -->
 					<article class="code-example inner">
@@ -111,6 +110,76 @@
 					</article>
 				</section> <!-- /style-details -->
 			</article> <!-- /style-mod -->
+
+			<article class="style-mod details-off">
+				<hgroup class="style-hgroup">
+					<h3 class="style-h">Section Headline</h3>
+					<a class="code-btn details-trigger"><span class="verb">Show</span> Details</a>
+				</hgroup>
+				<div class="inner">
+					<div class="style-example">
+						<h3 class="section-h1">.section-h1: Sample Section Headline</h3>
+					</div>
+				</div> <!-- /inner -->
+				<section class="style-details">
+					<article class="style-meta inner">
+						<h4 class="detail-h">Description</h4>
+						<ul class="detail-list">
+							<li><p>Header for a section of content. Think sidebar. Or a series of small site teases.</p></li>
+						</ul>
+					</article>  <!-- /style-meta -->
+					<article class="code-example inner">
+						<h4 class="detail-h" title="Copy to Clipboard">Code Snip <span class="code-copy">Copy to clipboard</span></h4>
+						<?php echo $code_snip ?>
+					</article>
+				</section> <!-- /style-details -->
+			</article> <!-- /style-mod -->
+
+			<article class="style-mod details-off">
+				<hgroup class="style-hgroup">
+					<h3 class="style-h">Section Headline Small</h3>
+					<a class="code-btn details-trigger"><span class="verb">Show</span> Details</a>
+				</hgroup>
+				<div class="inner">
+					<div class="style-example">
+						<h4 class="section-h2">.section-h2: Sample Section Headline Small</h4>
+					</div>
+				</div> <!-- /inner -->
+				<section class="style-details">
+					<article class="style-meta inner">
+						<h4 class="detail-h">Description</h4>
+						<ul class="detail-list">
+							<li><p>Smaller version of the aforementioned section headline.</p></li>
+						</ul>
+					</article>  <!-- /style-meta -->
+					<article class="code-example inner">
+						<h4 class="detail-h" title="Copy to Clipboard">Code Snip <span class="code-copy">Copy to clipboard</span></h4>
+						<?php echo $code_snip ?>
+					</article>
+				</section> <!-- /style-details -->
+			</article> <!-- /style-mod -->
+
+			<article class="style-mod details-off">
+				<hgroup class="style-hgroup">
+					<h3 class="style-h">Text Large</h3>
+					<a class="code-btn details-trigger"><span class="verb">Show</span> Details</a>
+				</hgroup>
+				<div class="inner">
+					<div class="style-example">
+						<article class="txt-lg">
+							<p>Sample text shown here. Sample text shown here. Sample text shown here. Sample text shown here. Sample text shown here. Sample text shown here. Sample text shown here. <a href="#">Sample link shown here</a>. Sample text shown here. Sample text shown here.</p>
+							<p>Sample text shown here. Sample text shown here. Sample text shown here. Sample text shown here. Sample text shown here.</p>
+						</article>
+					</div>
+				</div> <!-- /inner -->
+				<section class="style-details">
+					<article class="code-example inner">
+						<h4 class="detail-h" title="Copy to Clipboard">Code Snip <span class="code-copy">Copy to clipboard</span></h4>
+						<?php echo $code_snip ?>
+					</article>
+				</section> <!-- /style-details -->
+			</article> <!-- /style-mod -->
+
 
 		</section> <!-- /typography -->
 		
@@ -131,14 +200,6 @@
   <script type="text/javascript" src="_js/script.js"></script>
   <script type="text/javascript" src="_js/up-base.js"></script>
   <!-- end scripts-->
-
-
-  <!-- PNG fix for IE6 -->
-  <!--[if lt IE 7 ]>
-    <script src="_js/libs/dd_belatedpng.js"></script>
-    <script>DD_belatedPNG.fix("img, .png_bg");</script>
-  <![endif]-->
-
 
   <!-- change the UA-XXXXX-X to be your site's ID -->
   <script>

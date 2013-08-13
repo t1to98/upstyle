@@ -88,7 +88,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
   margin: 1em 0;
   padding: 0;
 }
@@ -354,12 +354,12 @@ button {
 /* !-- Universal ------------------------------------ */
 /* !-- Project ------------------------------------ */
 .page-h1 {
-  font: normal bold 4.769em Georgia, Times, Times New Roman, serif;
+  font: normal bold 4.76923em Georgia, Times, Times New Roman, serif;
   color: #000;
 }
 
 .page-h2 {
-  font: normal bold 3.154em Georgia, Times, Times New Roman, serif;
+  font: normal bold 3.15385em Georgia, Times, Times New Roman, serif;
   color: #000;
 }
 
@@ -376,7 +376,7 @@ button {
 .style-hdr {
   padding: 0 10px 21px;
   margin-bottom: 40px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
   position: relative;
   min-height: 60px;
   *zoom: 1;
@@ -392,12 +392,12 @@ button {
   bottom: -2px;
   left: 0;
   right: 0;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid white;
   z-index: 1;
 }
 
 .style-page-h {
-  font: normal bold 2.154em "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+  font: normal bold 2.15385em "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
   color: #000;
   text-shadow: white 1px 1px 0;
   float: left;
@@ -407,7 +407,7 @@ button {
 }
 
 .all-code-btn {
-  font-size: 0.846em;
+  font-size: 0.84615em;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #989898;
@@ -423,7 +423,6 @@ button {
   border-radius: 100px;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
-  -ms-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   -webkit-user-select: none;
@@ -463,7 +462,7 @@ button {
   color: #464646;
   background-color: #ededed;
   padding: 10px 24px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #dddddd;
   position: relative;
   *zoom: 1;
 }
@@ -479,7 +478,7 @@ button {
 }
 
 .code-btn {
-  font-size: 0.692em;
+  font-size: 0.69231em;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #989898;
@@ -495,7 +494,6 @@ button {
   border-radius: 100px;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
-  -ms-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   -webkit-user-select: none;
@@ -531,7 +529,7 @@ button {
 }
 
 .detail-h {
-  font: normal bold 0.923em "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+  font: normal bold 0.92308em "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
   letter-spacing: 1px;
   margin-bottom: 8px;
   color: #fff;
@@ -540,7 +538,7 @@ button {
 }
 
 .style-meta {
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #444444;
 }
 
 .code-example .detail-h:hover {
@@ -560,7 +558,6 @@ button {
   opacity: 0;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
-  -ms-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
@@ -612,7 +609,7 @@ button {
 }
 .html-code .nocode {
   background-color: none;
-  color: #000;
+  color: black;
 }
 .html-code .str {
   color: #ffa0a0;
@@ -625,10 +622,10 @@ button {
   color: #ffa0a0;
 }
 .html-code .typ {
-  color: #98fb98;
+  color: palegreen;
 }
 .html-code .lit {
-  color: #cd5c5c;
+  color: indianred;
 }
 .html-code .pun {
   color: rgba(255, 255, 255, 0.35);
@@ -642,10 +639,10 @@ button {
   font-weight: bold;
 }
 .html-code .atv {
-  color: #87ceeb;
+  color: skyblue;
 }
 .html-code .dec {
-  color: #98fb98;
+  color: palegreen;
 }
 .html-code .pln {
   color: rgba(255, 255, 255, 0.35);
@@ -653,13 +650,11 @@ button {
 .html-code .pln:first-child {
   width: 20px;
   height: 14px;
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-}
-.html-code .pln:first-child {
+  zoom: 1;
   *display: inline;
 }
 .html-code li:last-child .pln:first-child {
@@ -674,7 +669,7 @@ button {
 ol.linenums {
   margin-top: 0;
   margin-bottom: 0;
-  color: #AEAEAE;
+  color: #aeaeae;
 }
 
 /* IE indents via margin-left */
@@ -889,7 +884,7 @@ li.L50 {
   }
 
   pre .str, code .str {
-    color: #060;
+    color: #006600;
   }
 
   pre .kwd, code .kwd {
@@ -908,15 +903,15 @@ li.L50 {
   }
 
   pre .lit, code .lit {
-    color: #044;
+    color: #004444;
   }
 
   pre .pun, code .pun {
-    color: #440;
+    color: #444400;
   }
 
   pre .pln, code .pln {
-    color: #000;
+    color: black;
   }
 
   pre .tag, code .tag {
@@ -925,10 +920,10 @@ li.L50 {
   }
 
   pre .atn, code .atn {
-    color: #404;
+    color: #440044;
   }
 
   pre .atv, code .atv {
-    color: #060;
+    color: #006600;
   }
 }
